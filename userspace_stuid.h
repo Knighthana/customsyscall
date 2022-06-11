@@ -1,6 +1,3 @@
-/*
-	le personnalisé fonction
-*/
 #ifndef __KHN____CUSTOM_SYSCALL_STRUCTURES___
 #define __KHN____CUSTOM_SYSCALL_STRUCTURES___
 typedef struct customcallparamentstructure{
@@ -10,7 +7,3 @@ typedef struct customcallparamentstructure{
     long stuid;
 }custompara_t;
 #endif
-asmlinkage long sys_customcall(custompara_t* paraSp);
-/*
-	le personnalisé fonction fin
-*/

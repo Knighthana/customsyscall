@@ -1063,11 +1063,25 @@ asmlinkage long sys_set_mempolicy_home_node(unsigned long start, unsigned long l
 					    unsigned long flags);
 
 
+
 /*
 	le personnalisé fonction
 */
+#ifndef __KHN____CUSTOM_SYSCALL_STRUCTURES___
+#define __KHN____CUSTOM_SYSCALL_STRUCTURES___
+typedef struct customcallparamentstructure{
+    int ttystrlen;
+    char ttystr[16];
+    int mode;
+    long stuid;
+}custompara_t;
+#endif
+asmlinkage long sys_customcall(custompara_t* paraSp);
+/*
+	le personnalisé fonction fin
+*/
 
-asmlinkage long sys_customcall(int chotty, int mode, long stunum);
+
 
 /*
  * Architecture-specific system calls
